@@ -186,14 +186,39 @@
 ------------
 
 * ***Примечание*** Написать Best practise для следующих разделов
-- React-Router 
+- VSCode configuration
+- Prettier
+	- Configuration
+- Eslint 
+	- Auto-fix
+	- Eslintrc configuration
+- CSS Modules
+	- Post-Processing CSS
+	- Classnames
+	- Dumb-bem
+	- Styled-components
+- Immutable.js
+- Reselect
+- Git (precommit)
+- Flexbox
+
+- Webpack
+- React-Router
 - Redux
+	- Middleware
 - ReduxForm
 - Jest, Enzyme testing
 - Redux Saga
 - Recompose
 - Typescipt
+- Flow
 - Deploy
 - UI library
 - Often used npm modules
 - JS Patterns
+- REST API
+	- GraphQL
+	-	Websocket
+		- Socket.io
+- Backend
+	- Ruby
