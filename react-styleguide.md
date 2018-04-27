@@ -184,3 +184,16 @@
 	>		 }
 * ***Примечание***: defalutProps можно объявлять в самих props *`title = 'React'`* 
 ------------
+
+* ***Примечание*** Написать Best practise для следующих разделов
+- React-Router 
+- Redux
+- ReduxForm
+- Jest, Enzyme testing
+- Redux Saga
+- Recompose
+- Typescipt
+- Deploy
+- UI library
+- Often used npm modules
+- JS Patterns
