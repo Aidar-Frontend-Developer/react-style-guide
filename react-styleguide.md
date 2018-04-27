@@ -6,11 +6,13 @@
 > import _ from 'lodash'
 
 ------------
-- Использовать глобальные плагины такие как *`React, Redux, PropTypes и.т.д`*
+- Использовать глобальные зависимости *`React, Redux, PropTypes и.т.д`*
 
 > import React, { Component } from 'react'
 
 > import PropTypes from 'prop-types'
+
+* ***Примечание***: Отделяйте локально импортируемые зависимости от других. Повышает читаемость кода
 
 ------------
 - Использовать общие компоненты *`ca-common`*
@@ -47,7 +49,7 @@
 		> 		static ARRAY = [1,2,4,5]
 		> 		static METHOD() {}
 
-	- Статические *`propTypes`* и *`defaultProps`*:
+	- Статичные свойства *`propTypes`* и *`defaultProps`*:
 
         > 		static propTypes = {
         > 			option: PropTypes.string,
@@ -69,7 +71,7 @@
 ------------
 - Использовать *`constructor`*, если он необходим
 
-* ***Примечание***: Обходимость возникает при использовании (state)
+* ***Примечание***: Необходимость возникает только при использовании (state)
 	> 		constructor(props) {
 	> 			super(props);
 	> 			this.state = {
@@ -86,6 +88,10 @@
 	> 			}
 	>		 }
 
+* ***Примечание***: state можно объявлять и без конструктора
+	> 		state = {
+	> 			checkValue: 'I am state'
+	>		 }
 ------------
 - Использование *`Lifecycle methods`* , если он необходим.
 
@@ -94,13 +100,14 @@
 	> 		}
 
 ------------
-- Использование методов класса, которые использует компонент при вызове событий
+- Использование методов
 
 	> 		handleChechoxShowStatus = () => {
-	> 			console.log('I am event method')
+	> 			this.setState(prevState => ({ expanded: !prevState.expanded }))
 	> 		}
 
 * ***Примечание***: Желательно использовать стрелочные функции `arrow function` и называть методы с суфиксом "*handle*"
+* ***Примечание к this.setState***: Чтобы получить измененный state, передайте функцию setState, с предыдущим состоянием в качестве аргумента
 
 ------------
 -  Использование метода *`render`*
@@ -113,10 +120,16 @@
 ------------
 - Использование метода *`return`*
 
-* ***Примечание***: Стараемся избегать анонимных функций в методе render. Выносите их в отдельные функции
+* ***Примечание***: Стараемся избегать анонимных функций в методе render. Выносите их в отдельные функции.
+Каждый раз, когда родительский компонент перерендеривается, создается новая функция что и приводит к повторному рендерингу
+  >       return (
+	> 			<input type=text onChange={(e) => { model.name = e.target.value } />
+	> 		)
+
+* ***Примечание***: Используйте это вариант
 
 	> 		return (
-	> 			<CACheckbox checkboxStatus={this.handleCheckboxStatus} />
+	> 			<input type=text onChange={this.handleCheckboxStatus} />
 	> 		)
 
 ------------
@@ -131,7 +144,7 @@
 	>		 }
 
 ------------
-9. Использование метода *`mapDispatchToProps`*
+- Использование метода *`mapDispatchToProps`*
 
 * ***Примечание***: Чтобы сохранить некоторые сообщения, Redux предоставляет bindActionCreators(), который позволяет вам это сделать
 
@@ -150,10 +163,24 @@
 
 ### Stateless functional components
 
-* ***Пример***
+* ***Примечание***: У этих компонентов нету состояния (stateless). Они чисты и понятны, используйте их как можно чаще.
 
 	> 		const Square = ({ value, onClick }) => { 
 	> 			<button className="square" onClick={onClick}>{value}<button/>
 	>		 )}
 
+### Чем они отличаются от statefull компонентов ?
+
+- propTypes
+* ***Примечание***: Объявление proptypes вынесены из компонента
+
+	> 		Stateless.propTypes = {
+	> 			title: PropTypes.string
+	>		 }
+- Деструктуризация *`props`* и *`defaultProps`*
+
+	> 		const Stateless = ({ title = 'React' }) => {
+	> 			return ( <div>{title}</div> )
+	>		 }
+* ***Примечание***: defalutProps можно объявлять в самих props *`title = 'React'`* 
 ------------
