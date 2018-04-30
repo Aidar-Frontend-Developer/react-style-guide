@@ -17,7 +17,7 @@
 - *SVG Viewer ( ✔ )* ― плагин привносит в VS Code возможность работать с SVG файлами.
 - *Vue ( ✔ )* ― плагин, содержащий множество сниппетов для Vue JS.
 - *TODO highlight* ― плагин позволяет проставлять метки всем недоделанным местам в коде, что упрощает дальнейшую работу над проектом.
- 
+
 ## Лучшие темы для Visual Studio Code
 
 - *Atom One Dark Theme ( ✔ )*
@@ -48,52 +48,91 @@
 В появившимся окне настроек справа вставляем заготовленные настройки:
 ```json
 {
-	"gitlens.advanced.messages": {
-		"suppressCommitHasNoPreviousCommitWarning": false,
-		"suppressCommitNotFoundWarning": false,
-		"suppressFileNotUnderSourceControlWarning": false,
-		"suppressGitVersionWarning": false,
-		"suppressLineUncommittedWarning": false,
-		"suppressNoRepositoryWarning": false,
-		"suppressResultsExplorerNotice": false,
-		"suppressShowKeyBindingsNotice": true,
-		"suppressUpdateNotice": true,
-		"suppressWelcomeNotice": false
-	},
-	"liveServer.settings.donotShowInfoMsg": true,
-	"editor.fontSize": 13,
-	"editor.tabSize": 2,
-	"editor.wordWrap": "on",
-	"editor.formatOnSave": true,
-	"prettier.printWidth": 80,
-	"eslint.enable": true,
-	"files.insertFinalNewline": true,
-	"explorer.confirmDelete": false,
-	"editor.lineHeight": 24,
-	"explorer.decorations.badges": false,
-	"emmet.syntaxProfiles": {
-		"javascript": "jsx",
-		"xml": {
-			"attr_quotes": "single"
-		}
-	},
-	"emmet.includeLanguages": {
-		"javascript": "javascriptreact"
-	},
-	"emmet.triggerExpansionOnTab": true,
-	"files.associations": {
-		"*.vue": "vue"
-	},
-	"prettier.trailingComma": "none",
-	"gitlens.keymap": "none",
-	"vsicons.projectDetection.disableDetect": true,
-	"vsicons.dontShowNewVersionMessage": true,
-	"workbench.colorTheme": "Dracula Soft",
-	"editor.fontFamily": "Fira Code Medium",
-	"editor.fontLigatures": true,
-	"winopacity.opacity": 245,
-	"window.zoomLevel": 1,
-	"editor.minimap.enabled": true,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressResultsExplorerNotice": false,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": false
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "editor.fontSize": 14,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false,
+    "prettier.printWidth": 80,
+    "eslint.enable": true,
+    "eslint.autoFixOnSave": true,
+    "eslint.run": "onSave",
+    "files.insertFinalNewline": true,
+    "explorer.confirmDelete": false,
+    "editor.lineHeight": 24,
+    "explorer.decorations.badges": false,
+    "emmet.syntaxProfiles": {
+        "javascript": "jsx",
+        "xml": {
+            "attr_quotes": "single"
+        }
+    },
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.triggerExpansionOnTab": true,
+    "files.associations": {
+        "*.vue": "vue"
+    },
+    "prettier.trailingComma": "none",
+    "gitlens.keymap": "none",
+    "vsicons.projectDetection.disableDetect": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Seti Modified",
+    "editor.fontFamily": "Fira Code Medium",
+    "editor.fontLigatures": true,
+    "winopacity.opacity": 245,
+    "window.zoomLevel": 1,
+    "editor.minimap.enabled": true,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/*.scssc": true,
+        "**/*.cssc": true,
+        "**/db.json": true,
+        "**/*.min.*": true,
+        "**/*.log.*": true,
+        "**/dist": true,
+        "**/tmp": true,
+        "**/cache": true,
+        "**/test_assets": true,
+        "**/node_modules": true,
+        "**/public": true,
+        "**/.deploy_git": true,
+        "**/rethinkdb_data": true,
+        "**/lcov-report": true
+    },
+    "files.trimTrailingWhitespace": true,
+    "workbench.statusBar.visible": true,
+    "terminal.integrated.fontFamily": "'Fira Code'",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.lineHeight": 1.7,
+    "cSpell.enabledLanguageIds": [
+        "javascript",
+        "javascriptreact",
+        "markdown",
+        "html",
+        "vue",
+        "plaintext",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yml"
+    ]
 }
 ```
 
@@ -110,7 +149,7 @@
 ## Включаем иконки
 Жмём <kbd>F1</kbd>, печатаем `theme` и жмём <kbd>Enter</kbd>.
 В появившимся окне выбираем установленные иконки **VSCode Icons**.
- 
+
 ## Заключение
 Перезагружаем **Visual Studio Code**.
 Приятного использования.

@@ -165,7 +165,7 @@
 
 * ***Примечание***: У этих компонентов нету состояния (stateless). Они чисты и понятны, используйте их как можно чаще.
 
-	> 		const Square = ({ value, onClick }) => { 
+	> 		const Square = ({ value, onClick }) => {
 	> 			<button className="square" onClick={onClick}>{value}<button/>
 	>		 )}
 
@@ -182,17 +182,15 @@
 	> 		const Stateless = ({ title = 'React' }) => {
 	> 			return ( <div>{title}</div> )
 	>		 }
-* ***Примечание***: defalutProps можно объявлять в самих props *`title = 'React'`* 
+* ***Примечание***: defalutProps можно объявлять в самих props *`title = 'React'`*
 ------------
 
 * ***Примечание*** Написать Best practise для следующих разделов
-- VSCode configuration
-- Prettier
-	- Configuration
-- Eslint 
-	- Auto-fix
-	- Eslintrc configuration
-- CSS Modules
+- ~~VSCode configuration~~
+- ~~Eslint~~
+	- ~~Auto-fix~~
+	- ~~Eslintrc configuration~~
+- CSS Modules (in progress)
 	- Post-Processing CSS
 	- Classnames
 	- Dumb-bem
