@@ -193,7 +193,7 @@
 - CSS Modules (in progress)
 	- Post-Processing CSS
 	- Classnames
-	- Dumb-bem
+	- ~~Dumb-bem~~
 	- Styled-components
 - Immutable.js
 - Reselect
