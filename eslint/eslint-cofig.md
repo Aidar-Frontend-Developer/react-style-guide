@@ -1,4 +1,5 @@
-// .eslintrc | Common eslint rules
+## Common eslint rules
+```javascript
 module.exports = {
   "env": {
     "es6": true,
@@ -633,3 +634,4 @@ module.exports = {
     }
   ]
 };
+```
